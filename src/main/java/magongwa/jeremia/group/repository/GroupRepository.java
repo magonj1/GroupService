@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import magongwa.jeremia.group.model.Group;
 
 @Repository
-public interface GroupRepository extends MongoRepository<Group,ObjectId>{
+public interface GroupRepository extends MongoRepository<Group,String>{
 
 	public Group findByName(String name);
 	

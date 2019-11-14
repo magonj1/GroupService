@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection ="Group")
 public class Group {
 	@Id
-	private ObjectId group_id;
+	private String groupId;
 	private String name;
 	
 	public Group(String name)
@@ -15,11 +15,11 @@ public class Group {
 		this.name = name;
 	}
 	
-	public ObjectId getGroup_id() {
-		return group_id;
+	public String getGroup_id() {
+		return groupId;
 	}
-	public void setGroup_id(ObjectId group_id) {
-		this.group_id = group_id;
+	public void setGroup_id(String groupId) {
+		this.groupId = groupId;
 	}
 	public String getName() {
 		return name;
@@ -30,7 +30,7 @@ public class Group {
 
 	@Override
 	public String toString() {
-		return "Group [group_id=" + group_id + ", name=" + name + "]";
+		return "Group [group_id=" + groupId + ", name=" + name + "]";
 	}
 
 }
